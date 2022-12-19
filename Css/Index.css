@@ -1,0 +1,290 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    background-color: #aca69f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    font-family: 'Raleway';
+}
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    height: 65px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+.overlay a:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links a{
+    font-size: 25px;
+    color: white;
+}
+
+.header .nav-links li a:hover{
+    color: black;
+}
+
+.menu{
+    display: none   ;
+}
+
+.header .btn button,
+.header .menu button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px){
+    .nav-links, .btn{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+/*header 2*/
+.header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #aca69f;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: black;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px){
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.Cuerpo{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+                 "contenido contenido sidebar"
+                 "widget-1 widget-2 sidebar";
+}
+.Cuerpo > div,
+        .Cuerpo .contenido,
+        .Cuerpo .sidebar {
+        	background: #fff;
+        	padding: 20px;
+        	border-radius: 4px;
+        }
+.Cuerpo .contenido {
+    grid-area: contenido;
+}
+
+.Cuerpo .sidebar {
+    grid-column: 3 / 4;
+    background: #fAA43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+.Cuerpo .widget-1,
+.Cuerpo .widget-2 {
+    background: #55a8fd;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Cuerpo .widget-1 {
+    grid-area: widget-1;
+}
+.Cuerpo .widget-2 {
+    grid-area: widget-2;
+}
+.Titulo{
+    font-size: 45px;
+}
+.SubTitulo{
+    font-size: 45px;
+}
+.Texto{
+    font-size: 22px;
+    color: black;
+}
+.TituloRedesSociales{
+    font-size: 45px;
+    text-align: center;
+}
+.RedesSociales{
+    text-align: center;
+    margin-top: 25px;
+    list-style: none;
+}
+.RedesSociales a{
+    display: inline-flex;
+    color: white;
+    height: 48px;
+    width: 48px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: 0.4s;
+}
+
+.RedesSociales a:hover{
+    transform: scale(1.4);
+}
+.RedesSociales a.instagram{
+    background-color: mediumvioletred;
+}
+.RedesSociales a.whatsapp{
+    background-color: green;
+}   
+.RedesSociales a.facebook{
+    background-color: #3c70a4;
+}
+.RedesSociales a.telegram{
+    background-color: rgb(32, 130, 221);
+}
+.FraseRedesSociales{
+    font-size: 22px;
+    margin-top: 80px;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+/*footer*/
+.footer{
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../Footer/img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .footer-text{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background:rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #fff;
+}
+.footer .footer-text p{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    .Cuerpo {
+        grid-template-areas: "contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-2";
+    }
+    .Titulo{
+        font-size: 40px;
+    }
+    .SubTitulo{
+        font-size: 40px;
+    }
+    .TituloRedesSociales{
+        font-size: 40px;
+        text-align: center;
+    }
+    .FraseRedesSociales{
+        margin-top: 0px;
+        
+    }
+}

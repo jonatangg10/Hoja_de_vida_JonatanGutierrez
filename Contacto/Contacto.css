@@ -1,0 +1,298 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    background-color: #aca69f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    font-family: 'Raleway';
+}
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    height: 65px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+.overlay a:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links a{
+    font-size: 25px;
+    color: white;
+}
+
+.header .nav-links li a:hover{
+    color: black;
+}
+
+.menu{
+    display: none   ;
+}
+
+.header .btn button,
+.header .menu button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px){
+    .nav-links, .btn{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+/*header 2*/
+.header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #aca69f;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: black;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px){
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+.form{
+    background-color: #aca69f;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+}
+
+.form_container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.form_title{
+    color: white;
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom:  .4em;
+}
+
+.form_input{
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #bbb0b0;
+    border-radius: 0.2em;
+}
+
+.form_input--message{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+
+.form_cta{
+    font-size: 1rem;
+    background-color: #089fe0;
+    color: #fff;
+    border: none;
+    font-weight: 300;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+    font-weight: 400;
+
+}
+
+@media(max-widht:450px){
+    .form{
+        padding: 3.5em 1em;
+    }
+}
+.checkbox{
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.checkboxColor{
+    color: #089fe0;
+    text-decoration: none;
+    font-weight: bold;
+}
+.formulario div{
+	padding: 10px 0;
+	
+}
+.input[type="radio"]{
+    display: none;
+}
+.radio label{
+    color: #ffffff;
+	padding: 5px 15px 5px 51px;
+	display: inline-block;
+	position: relative;
+	font-size: 18px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.radio label:hover{
+    background: rgba(120, 120, 120, 0.54);
+}
+
+.radio label:before{
+    content: "";
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	background: none;
+	border: 3px solid #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	left: 17px;
+}
+
+.input[type="radio"]:checked + label{
+    padding: 5px 15px;
+	background: rgba(120, 120, 120, 0.54);
+	border-radius: 3px;
+}
+
+.input[type="radio"]:checked + label:before{
+    display: none;
+}
+
+.BotonRegresar{
+    padding: .375rem .75rem;
+  	border-radius: .25rem;
+    background-color: #007bff;
+  	color: #fff;
+  	transition: background-color .15s ease-in-out;
+	border: none;
+    text-decoration: none;
+}
+.TituloRespuestaContacto{
+    color: black;
+    font-size: 50px;
+}
+.TextoRespuestaContacto{
+    color: black;
+    font-size: 22px;
+}
+.ImgRespuestaContacto{
+    width: 500px;
+}
+/*footer*/
+.footer{
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../Footer/img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .footer-text{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background:rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #fff;
+}
+.footer .footer-text p{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    
+    .ImgRespuestaContacto{
+        width: 400px;
+    }
+    
+}

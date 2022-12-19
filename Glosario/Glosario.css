@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    background-color: #aca69f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    font-family: 'Raleway';
+}
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    height: 65px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+.overlay a:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links a{
+    font-size: 25px;
+    color: white;
+}
+
+.header .nav-links li a:hover{
+    color: black;
+}
+
+.menu{
+    display: none   ;
+}
+
+.header .btn button,
+.header .menu button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px){
+    .nav-links, .btn{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+/*header 2*/
+.header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #aca69f;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: black;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px){
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+table{
+    width: 90%;
+    margin-top: 20px;
+    margin: auto;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid gray;
+}
+th{
+    padding: 20px;
+    background-color: #55a8fd;
+    font-size: 25px;
+    color: white;
+}
+td{
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.payet{
+    cursor: pointer;
+    width: 425px;
+    height: 200px;
+}
+.payet{
+    transition: all 0.3s;
+}
+.payet:hover{
+    transform: scale(1.03);
+}
+/*footer*/
+.footer{
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../Footer/img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+}
+.footer .footer-text{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background:rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #fff;
+}
+.footer .footer-text p{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+@media screen and (min-width: 762px) and (max-width: 1100px) {
+    table{
+        width: 80%;
+        margin: auto;
+    }
+    th{
+        padding: 10px;
+        background-color: #55a8fd;
+        font-size: 20px;
+        color: white;
+    }
+    td{
+        padding: 5px;
+    }
+    .payet{
+        width: 200px;
+        height: 150px;
+    }
+}
+@media screen and (min-width: 380px) and (max-width: 762px) {
+    table{
+        width: 80%;
+        margin: auto;
+    }
+    th{
+        padding: 5px;
+        background-color: #55a8fd;
+        font-size: 15px;
+        color: white;
+    }
+    td{
+        padding: 5px;
+        font-size: 10px;
+    }
+    .CTabla{
+        display: none;
+    }
+    .payet{
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+    }
+}
+@media screen and (min-width: 350px) and (max-width: 380px) {
+    table{
+        width: 80%;
+        margin: auto;
+    }
+    th{
+        padding: 4px;
+        background-color: #55a8fd;
+        font-size: 13px;
+        color: white;
+    }
+    td{
+        padding: 5px;
+        font-size: 10px;
+    }
+    .CTabla{
+        display: none;
+    }
+    .payet{
+        cursor: pointer;
+        width: 80px;
+        height: 40px;
+    }
+}
+
